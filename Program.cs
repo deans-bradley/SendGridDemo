@@ -1,27 +1,52 @@
-﻿using SendGrid;
+﻿using System.Net;
+using System.Threading.Tasks;
+using SendGrid;
 using SendGrid.Helpers.Mail;
 
 namespace SendGridDemo
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Execute().Wait();
+            Console.WriteLine("Welcome! Press any key to send an email.");
+            Console.ReadLine();
+
+            Email email = new Email
+            {
+                From = "FROM_EMAIL_ADDRESS",
+                FromName = "FROM_NAME",
+                To = "TO_EMAIL_ADDRESS",
+                ToName = "TO_NAME",
+                Subject = "Howzit!",
+                Body = "How are you doing today?"
+            };
+
+            HttpStatusCode statusCode = await Execute(email);
+            
+            if (statusCode == HttpStatusCode.Accepted)
+            {
+                Console.WriteLine("Email sent successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Email failed to send.");
+            }
         }
 
-        static async Task Execute()
+        static async Task<HttpStatusCode> Execute(Email email)
         {
             string? apiKey = Environment.GetEnvironmentVariable("QR_CODE_GENERATOR_DEMO_SEND_GRID_API_KEY");
             SendGridClient client = new SendGridClient(apiKey);
-            EmailAddress from = new EmailAddress("developer@deansbrad.com", "Bradley Deans");
-            string subject = "SendGrid Demo.";
-            EmailAddress to = new EmailAddress("bradley.deans@firsttech.digital", "Bradley Deans");
-            string plainTextContent = "Howzit, my bru!";
-            string htmlContent = "<strong>Howzit, my bru!</strong>";
-            SendGridMessage msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
+            EmailAddress from = new EmailAddress(email.From, email.FromName);
+            EmailAddress to = new EmailAddress(email.To, email.ToName);
+            string htmlContent = $"<strong>{email.Body}</strong>";
+
+            SendGridMessage msg = MailHelper.CreateSingleEmail(from, to, email.Subject, email.Body, htmlContent);
             Response response = await client.SendEmailAsync(msg);
-            Console.WriteLine(response.StatusCode);
+
+            return response.StatusCode;
         }
     }
 }

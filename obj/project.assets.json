@@ -123,11 +123,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BradleyDeans\\Documents\\code\\SendGridDemo\\SendGridDemo.csproj",
+      "projectUniqueName": "C:\\Users\\BradleyDeans\\Documents\\vscode\\SendGridDemo\\SendGridDemo.csproj",
       "projectName": "SendGridDemo",
-      "projectPath": "C:\\Users\\BradleyDeans\\Documents\\code\\SendGridDemo\\SendGridDemo.csproj",
+      "projectPath": "C:\\Users\\BradleyDeans\\Documents\\vscode\\SendGridDemo\\SendGridDemo.csproj",
       "packagesPath": "C:\\Users\\BradleyDeans\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BradleyDeans\\Documents\\code\\SendGridDemo\\obj\\",
+      "outputPath": "C:\\Users\\BradleyDeans\\Documents\\vscode\\SendGridDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

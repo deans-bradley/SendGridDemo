@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SendGridDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b4d61899739e9df03b415096a96226c434850e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SendGridDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SendGridDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
