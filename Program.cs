@@ -1,7 +1,7 @@
 ﻿using System.Net;
-using System.Threading.Tasks;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using DotNetEnv;
 
 namespace SendGridDemo
 {
@@ -9,6 +9,7 @@ namespace SendGridDemo
     {
         static async Task Main(string[] args)
         {
+            Env.Load();
             Console.WriteLine("Welcome! Press any key to send an email.");
             Console.ReadLine();
 
@@ -36,7 +37,7 @@ namespace SendGridDemo
 
         static async Task<HttpStatusCode> Execute(Email email)
         {
-            string? apiKey = Environment.GetEnvironmentVariable("QR_CODE_GENERATOR_DEMO_SEND_GRID_API_KEY");
+            string? apiKey = Environment.GetEnvironmentVariable("SEND_GRID_API_KEY");
             SendGridClient client = new SendGridClient(apiKey);
 
             EmailAddress from = new EmailAddress(email.From, email.FromName);

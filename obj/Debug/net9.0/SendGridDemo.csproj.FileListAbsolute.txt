@@ -37,3 +37,8 @@ C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\obj\Debug\net9.0\refint\Send
 C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\obj\Debug\net9.0\SendGridDemo.pdb
 C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\obj\Debug\net9.0\SendGridDemo.genruntimeconfig.cache
 C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\obj\Debug\net9.0\ref\SendGridDemo.dll
+C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\bin\Debug\net9.0\DotNetEnv.dll
+C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\BradleyDeans\Documents\vscode\SendGridDemo\bin\Debug\net9.0\Sprache.dll
