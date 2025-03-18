@@ -41,6 +41,3 @@ The application will send a test email using SendGrid. Modify the email recipien
 ## Dependencies
 - [SendGrid C# SDK](https://github.com/sendgrid/sendgrid-csharp)
 - [DotNetEnv](https://github.com/tonerdo/dotnet-env) for environment variable management
-
-## License
-This project is open-source and available under the [MIT License](LICENSE).
